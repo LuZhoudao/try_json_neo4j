@@ -1,0 +1,162 @@
+   {
+        "id": "Money_Growth",
+        "label": "EconomicConcept",
+        "properties": {
+            "description": "The rate at which the money supply increases in an economy.",
+            "determinant_of": "Inflation"
+        }
+    },
+    {
+        "id": "Inflation",
+        "label": "EconomicConcept",
+        "properties": {
+            "description": "The rate at which the general level of prices for goods and services rises, eroding purchasing power."
+        }
+    },
+    {
+        "id": "Price_Level",
+        "label": "EconomicConcept",
+        "properties": {
+            "description": "The average of current prices across the entire spectrum of goods and services produced in the economy."
+        }
+    },
+    {
+        "id": "Real_Interest_Rate",
+        "label": "EconomicConcept",
+        "properties": {
+            "description": "The nominal interest rate adjusted for inflation.",
+            "symbol": "r"
+        }
+    },
+    {
+        "id": "Nominal_Interest_Rate",
+        "label": "EconomicConcept",
+        "properties": {
+            "description": "The interest rate before adjusting for inflation.",
+            "symbol": "i"
+        }
+    },
+    {
+        "id": "Expected_Inflation",
+        "label": "EconomicConcept",
+        "properties": {
+            "description": "The rate of inflation that is anticipated by economic agents.",
+            "symbol": "pi_e"
+        }
+    },
+    {
+        "id": "Fisher_Identity",
+        "label": "EconomicIdentity",
+        "properties": {
+            "description": "The identity that states the nominal interest rate is equal to the real interest rate plus expected inflation.",
+            "equation": "i = r + pi_e"
+        }
+    },
+    {
+        "id": "Fisher_Effect",
+        "label": "EconomicConcept",
+        "properties": {
+            "description": "The hypothesis that the nominal interest rate adjusts one-for-one with changes in expected inflation."
+        }
+    },
+    {
+        "id": "Money_Supply",
+        "label": "EconomicConcept",
+        "properties": {
+            "description": "The total amount of money available in an economy at a particular point in time.",
+            "symbol": "M"
+        }
+    },
+    {
+        "id": "Real_Money_Balances",
+        "label": "EconomicConcept",
+        "properties": {
+            "description": "The amount of money in terms of its purchasing power, adjusted for the price level."
+        }
+    },
+    {
+        "id": "Monetary_Policy",
+        "label": "EconomicPolicy",
+        "properties": {
+            "description": "The actions taken by a central bank or other regulatory authorities to control the money supply and interest rates in the economy."
+        }
+    },
+    {
+        "id": "Hyperinflation",
+        "label": "EconomicEvent",
+        "properties": {
+            "description": "Extremely high and typically accelerating inflation, often exceeding 50% per month."
+        }
+    }
+{
+        "start_node": "Money_Growth",
+        "end_node": "Inflation",
+        "relationship": "DETERMINES",
+        "properties": {}
+    },
+    {
+        "start_node": "Real_Interest_Rate",
+        "end_node": "Nominal_Interest_Rate",
+        "relationship": "INFLUENCES",
+        "properties": {}
+    },
+    {
+        "start_node": "Expected_Inflation",
+        "end_node": "Nominal_Interest_Rate",
+        "relationship": "INFLUENCES",
+        "properties": {}
+    },
+    {
+        "start_node": "Fisher_Identity",
+        "end_node": "Nominal_Interest_Rate",
+        "relationship": "DETERMINES",
+        "properties": {}
+    },
+    {
+        "start_node": "Fisher_Identity",
+        "end_node": "Expected_Inflation",
+        "relationship": "DETERMINES",
+        "properties": {}
+    },
+    {
+        "start_node": "Fisher_Effect",
+        "end_node": "Nominal_Interest_Rate",
+        "relationship": "INFLUENCES",
+        "properties": {}
+    },
+    {
+        "start_node": "Money_Supply",
+        "end_node": "Price_Level",
+        "relationship": "DETERMINES",
+        "properties": {}
+    },
+    {
+        "start_node": "Price_Level",
+        "end_node": "Real_Money_Balances",
+        "relationship": "DETERMINES",
+        "properties": {}
+    },
+    {
+        "start_node": "Expected_Inflation",
+        "end_node": "Real_Money_Balances",
+        "relationship": "DECREASES",
+        "properties": {}
+    },
+    {
+        "start_node": "Monetary_Policy",
+        "end_node": "Money_Supply",
+        "relationship": "CONTROLS",
+        "properties": {}
+    },
+    {
+        "start_node": "Monetary_Policy",
+        "end_node": "Inflation",
+        "relationship": "INFLUENCES",
+        "properties": {}
+    },
+    {
+        "start_node": "Hyperinflation",
+        "end_node": "Inflation",
+        "relationship": "EXEMPLIFIES",
+        "properties": {}
+    }
