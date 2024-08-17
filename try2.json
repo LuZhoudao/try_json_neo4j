@@ -1,1 +1,2 @@
-
+{"type": "node", "id": "0", "labels": ["Node"], "properties":{"name": "Barack Obama", "id":"Q76", "type": "human"}}
+{"type": "node", "id": "1", "labels": ["Node"], "properties": {"name": "United States of America", "id": "Q30", "type": "sovereign state"}}
